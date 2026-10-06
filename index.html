@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antiemetic Guide for the ED</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Tailwind gray-50 */
+        }
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-in-out;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+        }
+        .accordion-content.open {
+            max-height: 5000px; /* Large enough for content */
+            opacity: 1;
+        }
+        .accordion-header svg {
+            transition: transform 0.3s ease-in-out;
+        }
+        .accordion-header.open svg {
+            transform: rotate(180deg);
+        }
+        .syndrome-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Choosing the Right Antiemetic in the ED</h1>
+            <p class="text-lg text-gray-600 mt-2">A Quick Guide for Clinicians</p>
+            <p class="text-sm text-gray-500 mt-1">Based on Glare et al., <span class="italic">Clinical Interventions in Aging</span> (2011)</p>
+        </header>
+
+        <div class="space-y-6">
+            <!-- Section 1: Assessment -->
+            <div class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                <div id="accordion-header-1" class="accordion-header p-6 cursor-pointer flex justify-between items-center bg-gray-50/50 open">
+                    <h2 class="text-2xl font-bold text-teal-700">1. Assess the Patient: What is the Nausea's Story?</h2>
+                    <svg class="w-6 h-6 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div id="accordion-content-1" class="accordion-content p-6 pt-0 open">
+                    <p class="mb-6 text-gray-600">A quick history can point to the underlying cause and the most effective treatment pathway.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Syndrome 1 Card -->
+                        <div class="syndrome-card bg-teal-50 border border-teal-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
+                            <div class="flex items-center mb-3">
+                                <svg class="w-8 h-8 text-teal-600 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1014.625 7.5H9.375A2.625 2.625 0 1012 4.875z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 12.75v6" /></svg>
+                                <h3 class="text-lg font-semibold text-teal-800">Gastric Stasis / Impaired Emptying</h3>
+                            </div>
+                            <ul class="space-y-2 text-sm text-gray-700 list-disc list-inside">
+                                <li><strong>Patient says:</strong> "I feel full really quickly," "I'm bloated," "Vomiting helps a bit."</li>
+                                <li><strong>Vomit is:</strong> Small volume, may contain undigested food.</li>
+                                <li><strong>Think:</strong> Gastroparesis, opioids, ascites.</li>
+                            </ul>
+                            <div class="mt-4 pt-3 border-t border-teal-200">
+                                <p class="text-xs font-medium text-teal-700">PATHWAY: GI Tract (Dopamine, Serotonin)</p>
+                            </div>
+                        </div>
+                        <!-- Syndrome 2 Card -->
+                        <div class="syndrome-card bg-blue-50 border border-blue-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
+                             <div class="flex items-center mb-3">
+                                <svg class="w-8 h-8 text-blue-600 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m-3-1l-3 1m0-1l-3-1m3 1v5.5" /></svg>
+                                <h3 class="text-lg font-semibold text-blue-800">Chemical / Toxin-Mediated</h3>
+                            </div>
+                            <ul class="space-y-2 text-sm text-gray-700 list-disc list-inside">
+                                <li><strong>Patient says:</strong> "The nausea is constant," "Smells make it worse," "Vomiting doesn't help."</li>
+                                <li><strong>Think:</strong> Metabolic (uraemia, hypercalcaemia), medications, toxins.</li>
+                            </ul>
+                            <div class="mt-4 pt-3 border-t border-blue-200">
+                                <p class="text-xs font-medium text-blue-700">PATHWAY: Chemoreceptor Trigger Zone (CTZ)</p>
+                            </div>
+                        </div>
+                        <!-- Syndrome 3 Card -->
+                        <div class="syndrome-card bg-indigo-50 border border-indigo-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
+                             <div class="flex items-center mb-3">
+                                <svg class="w-8 h-8 text-indigo-600 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.17 48.17 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" /></svg>
+                                <h3 class="text-lg font-semibold text-indigo-800">Vestibular</h3>
+                            </div>
+                            <ul class="space-y-2 text-sm text-gray-700 list-disc list-inside">
+                                <li><strong>Patient says:</strong> "I feel dizzy," "It's worse when I move my head."</li>
+                                <li><strong>Think:</strong> Motion sickness, labyrinthitis, CNS metastases.</li>
+                            </ul>
+                           <div class="mt-4 pt-3 border-t border-indigo-200">
+                                <p class="text-xs font-medium text-indigo-700">PATHWAY: Vestibular Nucleus</p>
+                            </div>
+                        </div>
+                        <!-- Syndrome 4 Card -->
+                        <div class="syndrome-card bg-purple-50 border border-purple-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
+                           <div class="flex items-center mb-3">
+                                <svg class="w-8 h-8 text-purple-600 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.024.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664l.143.258a1.107 1.107 0 001.664.57l.143-.048a2.25 2.25 0 011.161.886l.51.766c.319.466.226 1.121-.216 1.49l-1.068.89a1.125 1.125 0 00-.405.864v.568m-6 0v-.568c0-.334-.148-.65-.405-.864l-1.068-.89c-.442-.369-.535-1.024-.216-1.49l.51-.766a2.25 2.25 0 011.161-.886l.143-.048a1.107 1.107 0 00.57-1.664l-.143-.258a1.107 1.107 0 00-1.664-.57l-.143.048a2.25 2.25 0 01-1.161-.886l-.51-.766c-.319-.466-.226-1.121.216-1.49l1.068-.89a1.125 1.125 0 00.405-.864v-.568" /></svg>
+                                <h3 class="text-lg font-semibold text-purple-800">Bowel Obstruction</h3>
+                            </div>
+                            <ul class="space-y-2 text-sm text-gray-700 list-disc list-inside">
+                                <li><strong>Patient says:</strong> "I have crampy tummy pain," "I haven't opened my bowels."</li>
+                                <li><strong>Vomit is:</strong> Large volume, may become bilious or faeculent.</li>
+                                <li><strong>Think:</strong> Mechanical obstruction, ileus, constipation.</li>
+                            </ul>
+                           <div class="mt-4 pt-3 border-t border-purple-200">
+                                <p class="text-xs font-medium text-purple-700">PATHWAY: GI Tract & Visceral Afferents</p>
+                            </div>
+                        </div>
+                        <!-- Syndrome 5 Card -->
+                        <div class="syndrome-card bg-pink-50 border border-pink-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
+                            <div class="flex items-center mb-3">
+                                <svg class="w-8 h-8 text-pink-600 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.375a6.375 6.375 0 110-12.75 6.375 6.375 0 010 12.75zM12 7.5h.008v.008H12V7.5z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.375a6.375 6.375 0 00-6.375-6.375m6.375 6.375a6.375 6.375 0 01-6.375-6.375m6.375 6.375v-6.375" /><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 12c0 5.385-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12 6.615 2.25 12 2.25 21.75 6.615 21.75 12zM12 7.5h.008v.008H12V7.5z" /></svg>
+                                <h3 class="text-lg font-semibold text-pink-800">Cortical / Anxiety-Driven</h3>
+                            </div>
+                            <ul class="space-y-2 text-sm text-gray-700 list-disc list-inside">
+                                <li><strong>Patient says:</strong> "I feel very anxious," "The thought of it makes me sick."</li>
+                                <li><strong>Think:</strong> Raised ICP (check for headache), anxiety.</li>
+                            </ul>
+                            <div class="mt-4 pt-3 border-t border-pink-200">
+                                <p class="text-xs font-medium text-pink-700">PATHWAY: Cerebral Cortex (GABA)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 2: Match the Cause -->
+            <div class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                <div id="accordion-header-2" class="accordion-header p-6 cursor-pointer flex justify-between items-center bg-gray-50/50">
+                    <h2 class="text-2xl font-bold text-blue-700">2. Match the Cause to the Drug Class</h2>
+                    <svg class="w-6 h-6 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div id="accordion-content-2" class="accordion-content p-6 pt-0">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="p-4 font-semibold">Clinical Syndrome</th>
+                                    <th class="p-4 font-semibold">First-Line Drug Class</th>
+                                    <th class="p-4 font-semibold">Drug Examples (UK)</th>
+                                    <th class="p-4 font-semibold">Mechanism</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="p-4 font-medium">Gastric Stasis</td>
+                                    <td class="p-4">Prokinetic (D₂ Antagonist)</td>
+                                    <td class="p-4">Metoclopramide</td>
+                                    <td class="p-4">Stimulates gut motility.</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="p-4 font-medium">Chemical/Toxin</td>
+                                    <td class="p-4">Dopamine D₂ Antagonist</td>
+                                    <td class="p-4">Haloperidol, Prochlorperazine</td>
+                                    <td class="p-4">Blocks the CTZ from detecting emetogenic substances.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-medium">Vestibular</td>
+                                    <td class="p-4">Antihistamine (H₁) / Anticholinergic</td>
+                                    <td class="p-4">Cyclizine, Prochlorperazine</td>
+                                    <td class="p-4">Blocks signals from the inner ear to the vomiting centre.</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="p-4 font-medium">Bowel Obstruction</td>
+                                    <td class="p-4">Antisecretory / Antimuscarinic</td>
+                                    <td class="p-4">Cyclizine, Hyoscine Butylbromide</td>
+                                    <td class="p-4">Reduces secretions and spasm. <strong class="text-red-600">AVOID prokinetics.</strong></td>
+                                </tr>
+                                 <tr>
+                                    <td class="p-4 font-medium">Cortical/Anxiety</td>
+                                    <td class="p-4">Benzodiazepine</td>
+                                    <td class="p-4">Lorazepam (as an adjunct)</td>
+                                    <td class="p-4">Anxiolytic and amnesic properties.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Toolkit -->
+            <div class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                <div id="accordion-header-3" class="accordion-header p-6 cursor-pointer flex justify-between items-center bg-gray-50/50">
+                    <h2 class="text-2xl font-bold text-green-700">3. Quick Reference: Antiemetic Toolkit</h2>
+                    <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                 <div id="accordion-content-3" class="accordion-content p-6 pt-0">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="p-4 font-semibold">Drug</th>
+                                    <th class="p-4 font-semibold">Class</th>
+                                    <th class="p-4 font-semibold">Primary Use Case</th>
+                                    <th class="p-4 font-semibold">Pearls for the ED</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="p-4 font-medium">Metoclopramide</td>
+                                    <td class="p-4">D₂ Antagonist (Prokinetic)</td>
+                                    <td class="p-4">Gastric Stasis. Mild chemical nausea.</td>
+                                    <td class="p-4">Risk of EPSEs (dystonia), esp. in the young. Avoid in complete bowel obstruction & Parkinson's.</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="p-4 font-medium">Ondansetron</td>
+                                    <td class="p-4">5HT₃ Antagonist</td>
+                                    <td class="p-4">Visceral Nausea (gastroenteritis). Post-op. Chemo-induced.</td>
+                                    <td class="p-4">Can cause constipation & headache. Caution with QT prolongation. Not for motion sickness.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-medium">Cyclizine</td>
+                                    <td class="p-4">H₁ Antihistamine</td>
+                                    <td class="p-4">Vestibular Nausea. Bowel obstruction.</td>
+                                    <td class="p-4">Can cause drowsiness & dry mouth. Caution in elderly (anticholinergic effects).</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="p-4 font-medium">Haloperidol</td>
+                                    <td class="p-4">D₂ Antagonist (Butyrophenone)</td>
+                                    <td class="p-4">Chemical/Toxin-Mediated Nausea. "Broad-spectrum" option.</td>
+                                    <td class="p-4">Less sedating. Monitor for EPSEs. Caution with QT prolongation.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-medium">Prochlorperazine</td>
+                                    <td class="p-4">D₂ Antagonist (Phenothiazine)</td>
+                                    <td class="p-4">Vestibular Nausea (labyrinthitis). Mild chemical nausea.</td>
+                                    <td class="p-4">Can be given buccally. Risk of dystonic reactions. Can cause sedation & hypotension.</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="p-4 font-medium">Levomepromazine</td>
+                                    <td class="p-4">Broad Spectrum</td>
+                                    <td class="p-4">Refractory Nausea.</td>
+                                    <td class="p-4">Highly effective but very sedating. Typically reserved for palliative care.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Special Considerations -->
+             <div class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                <div id="accordion-header-4" class="accordion-header p-6 cursor-pointer flex justify-between items-center bg-gray-50/50">
+                    <h2 class="text-2xl font-bold text-red-700">4. Special Considerations: The Elderly Patient</h2>
+                    <svg class="w-6 h-6 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div id="accordion-content-4" class="accordion-content p-6 pt-0">
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                             <svg class="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" /></svg>
+                             <div><strong class="font-semibold">"Start low, go slow."</strong> Older adults are more susceptible to side effects.</div>
+                        </li>
+                         <li class="flex items-start">
+                             <svg class="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" /></svg>
+                             <div><strong class="font-semibold">Beware of Anticholinergic Burden:</strong> Drugs like cyclizine can worsen confusion, glaucoma, and prostatic hypertrophy.</div>
+                        </li>
+                         <li class="flex items-start">
+                             <svg class="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" /></svg>
+                             <div><strong class="font-semibold">Metoclopramide:</strong> Increased risk of tardive dyskinesia and other extrapyramidal symptoms. Use with caution.</div>
+                        </li>
+                         <li class="flex items-start">
+                            <svg class="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" /></svg>
+                            <div><strong class="font-semibold">Benzodiazepines:</strong> Increased risk of falls and delirium. Use lorazepam if necessary (shorter action, inactive metabolites).</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center mt-10">
+            <p class="text-xs text-gray-500">This is a summary guide and does not replace clinical judgement. Always consult local guidelines and formularies.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function () {
+                    const contentId = this.id.replace('header', 'content');
+                    const content = document.getElementById(contentId);
+
+                    this.classList.toggle('open');
+                    content.classList.toggle('open');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
